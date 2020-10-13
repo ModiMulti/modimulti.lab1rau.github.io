@@ -223,6 +223,8 @@ $(document).ready(function() {
             $(document).mouseup(function () {
                 map.dragging.enable();
             });
+			
+	    $(document).addEventListener('touchmove', function() { e.preventDefault(); }, { passive:false });
 
 			L.DomEvent.addListener(slider, 'mousedown', function(e) {
 
